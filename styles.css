@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --chocolate-cosmos: #be454e;
+    --gunmetal: #0f2320;
+    --dark-slate-gray: #1b3834;
+    --ash-gray: #c9cebd;
+    --rosy-brown: #b79b92;
+    --weak-black: #1a1a1a;
+    --off-white: #f2f2f2;
+  }
+  
+  body {
+    font-family: "Barlow", sans-serif;
+    background-color: var(--off-white);
+    color: var(--weak-black);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+  
+  *{
+    box-sizing: border-box;
+  }
+  
+  .header {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    width: 100%;
+    z-index: 10;
+  }
+
+  .header .wrap {
+    background-color: var(--chocolate-cosmos);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.3rem 3rem;
+    width: 75rem;
+    margin: 1.05rem;
+    margin-top: 1.8rem;
+    border-radius: 3rem;
+    margin-right: 0px;
+    border-top-right-radius: 0px;
+    border-end-end-radius: 0px;
+  }
+
+  .header .train {
+    height: 150px;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+    color: var(--off-white);
+    margin-top: 27px;
+  }
+
+  .header nav {
+    display: flex;
+    align-items: center;
+    
+  }
+
+  .header nav ul {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  .header nav li {
+    margin-left: 1.5rem;
+    list-style: none;
+  }
+
+  .header nav li a {
+    color: var(--off-white);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .header nav li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    margin-top: 1px;
+    background: var(--weak-black);
+    transition: width .3s;
+  }
+
+  .header nav li a:hover::after {
+    width: 100%;
+  }
+
+  .header nav li a:hover {
+    color: var(--rosy-brown);
+  }
+
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    background-image: url('Images/hero.webp'); /* Replace with the path to your image */
+    background-size: cover;
+    background-position: center;
+    color: var(--off-white);
+  }
+  
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+  }
+  
+  .intro {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+  }
+  
+  .intro h2 {
+    font-size: 2.5rem;
+    color: var(--chocolate-cosmos);
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  
+  .intro p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .button {
+    display: inline-block;
+  padding: 0.75rem 1.5rem;
+  color: var(--dark-slate-gray);
+  background-color: rgba(200, 200, 200, 0.4); /* Light background for visibility */
+  border-radius: 5px;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  }
+  
+  
+  .button:hover {
+    background-color: var(--rosy-brown);
+    color: var(--off-white);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
+  }
+
+  .details {
+	padding: 50px 0;
+    margin-top: 50px;
+}
+
+.details .text {	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.details p {
+	font-size: 23px;
+	font-weight: 600;
+}
+
+.details .image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.details img {
+	height: 460px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    object-fit: cover;
+    max-width: 620px;
+}
+
+/* Footer Styling */
+.footer {
+    padding: 1rem;
+    background-color: var(--dark-slate-gray);
+    color: var(--off-white);
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  .footer p {
+    margin: 0.5rem 0;
+  }
+  
+  .socials {
+    margin-top: 0.5rem;
+  }
+  
+  .socials a {
+    color: var(--ash-gray);
+    margin: 0 0.75rem;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+    text-decoration: none;
+  }
+  
+  .socials a:hover {
+    color: var(--rosy-brown);
+  }
+  
+  .timeline .left {
+    display: grid;
+    grid-template-columns: 25.15% 74.85%;
+    grid-template-rows: 1fr;
+    grid-column-gap: 100px;
+    grid-row-gap: 0px;
+}
+
+.timeline .left .rail {
+    display: block;
+    margin-left: auto;
+    width: 102px;
+    filter: sepia(0.4);
+    z-index: -2;
+}
+.timeline .turn {
+    filter: sepia(0.4);
+}
+
+.timeline .right {
+    display: grid;
+    grid-template-columns: 70.44% 29.56%;
+    grid-template-rows: 1fr;
+    grid-column-gap: 100px;
+    grid-row-gap: 0px;
+}
+
+.timeline .right .rail {
+    display: block;
+    margin-right: auto;
+    width: 102px;
+    filter: sepia(0.4);
+    z-index: -2;
+}
+
+.timeline .first .card {
+    border: none;
+    background: var(--off-white);
+    box-shadow: none;
+}
+
+.timeline .first .card h1 {
+    position: absolute;
+    top: 60%;
+    transform: translate(-50% -50%);
+    font-size: 70px;
+    font-weight: bold;
+    color: var(--dark-slate-gray);
+}
+
+.timeline .first .card h1::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 4px;
+    margin-top: 1px;
+    background: var(--chocolate-cosmos);
+    transition: width .3s;
+    border-radius: 10px;
+}
+
+.timeline .first .card h1:hover::after {
+    width: 100%;
+}
+
+/* Card Styling */
+.timeline .card {
+    background-color: #fdfaf6; /* Light, warm background to match vintage style */
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.timeline .left .card {
+    margin: 4rem 35rem 4rem 15rem;
+}
+
+.timeline .left+.info .card::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: -67%;
+    top: 44.5%;
+    border-radius: 100%;
+    border: 10px solid var(--chocolate-cosmos);
+    opacity: 0.4;
+    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.7);
+}
+
+.timeline .left+.info .card::after {
+    content: "";
+    position: absolute;
+    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.13);
+    width: 420px;
+    height: 25px;
+    left: -60%;
+    top: 47%;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.timeline .right .card {
+    margin: 4rem 15rem 4rem 35rem;
+}
+
+.timeline .right .card::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: -77.4%;
+    top: 44.5%;
+    border-radius: 100%;
+    border: 10px solid var(--chocolate-cosmos);
+    opacity: 0.4;
+    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.7);
+}
+
+.timeline .right .card::after {
+    content: "";
+    position: absolute;
+    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.13);
+    width: 420px;
+    height: 25px;
+    right: -70%;
+    top: 47%;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+/* Card Image Styling */
+.timeline .card-image {
+    max-height: 270px; /* Adjust this to your preferred maximum height */
+    object-fit: cover;  /* Ensures the image is cropped to fit within the set height */
+    object-position: center; /* Crops the image from the top */
+    width: 100%; /* Ensures the image spans the full width of its container */
+    height: auto;
+    margin-bottom: 0.8rem;
+    border-radius: 4px;
+    filter: sepia(0.3); /* Gives a vintage look */
+}
+
+/* Card Year Styling */
+.timeline .card-year {
+    color: var(--chocolate-cosmos);
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+/* Card Title Styling */
+.timeline .card-title {
+    color: var(--gunmetal);
+    font-size: 1.25rem;
+    margin: 0.3rem 0;
+    font-weight: 600;
+}
+
+/* Card Text Styling */
+.timeline .card-text {
+    color: var(--dark-slate-gray);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-top: 0.5rem;
+}
+
+.famous-trains {
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    padding-top: 230px;
+}
+
+
+.innovations {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.innovations .row {
+    justify-content: space-between;
+}
+ 
+.innovations .card {
+    position: relative;
+    background: none;
+    border: none;
+}
+
+.innovations .card .face {
+    margin-left: 25px;
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+.innovations .card .face.face1 {
+    position: relative;
+    background: var(--dark-slate-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.innovations .card:hover .face.face1{
+    background: var(--chocolate-cosmos);
+    transform: translateY(0);
+}
+
+.innovations .card .face.face1 .content{
+    opacity: 0.6;
+    transition: 0.5s;
+}
+
+.innovations .card:hover .face.face1 .content{
+    opacity: 1;
+}
+
+.innovations .card .face.face1 .content img{
+    width: 300px;
+    object-fit: cover;
+    max-height: 200px;
+}
+
+.innovations .card .face.face2 {
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+}
+
+.innovations .card:hover .face.face2 {
+    transform: translateY(0);
+}
+
+.innovations .card .face.face2 .content p {
+    margin: 0;
+    padding: 0;
+}
+
+.innovations .card .face.face2 .content a {
+    margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+}
+
+.innovations .card .face.face2 .content a:hover {
+    background: #333;
+    color: #fff;
+}
